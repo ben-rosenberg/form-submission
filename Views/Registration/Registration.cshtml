@@ -1,0 +1,42 @@
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form asp-action="Register" asp-controller="Registration" method="post">
+        <p>
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName">
+            <span asp-validation-for="FirstName"></span>
+        </p>
+        <p>
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName">
+            <span asp-validation-for="LastName"></span>
+        </p>
+        <p>
+            <label asp-for="Age"></label>
+            <input asp-for="Age">
+            <span asp-validation-for="Age"></span>
+        </p>
+        <p>
+            <label asp-for="Email"></label>
+            <input asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </p>
+        <p>
+            <label asp-for="Password"></label>
+            <input asp-for="Password">
+            <span asp-validation-for="Password"></span>
+        </p>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
